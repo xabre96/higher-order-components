@@ -12,13 +12,14 @@ const Increment = (WrappedComponent) => {
       });
     }
 
+    incrementCountByTwo = () => {
+      this.setState({
+        count: this.state.count + 2,
+      });
+    }
+
     render() {
-      return (
-        <WrappedComponent
-          {...this.state}
-          incrementCount={this.incrementCount}
-        />
-      );
+      return <WrappedComponent {...this.state} incrementCount={this.incrementCount} incrementCountByTwo={this.incrementCountByTwo}/>
     }
   }
 }
