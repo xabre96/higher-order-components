@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Label = (props) => {
   return (
-    <label onMouseMove={props.incrementCount}>Count: {props.count}</label>
+    <label onMouseMove={props.incrementCount} onClick={props.incrementCountByTwo}>Count: {props.count}</label>
   );
 }
 
